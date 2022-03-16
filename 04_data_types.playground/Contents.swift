@@ -50,3 +50,10 @@ if converter != nil {
 }else {
     print("The uses's age is null")
 }
+
+
+if let firstNumber = Int("4"),
+    let secondNumber = Int("64"),
+    firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
