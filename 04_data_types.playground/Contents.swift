@@ -57,3 +57,9 @@ if let firstNumber = Int("4"),
     firstNumber < secondNumber && secondNumber < 100 {
     print("\(firstNumber) < \(secondNumber) < 100")
 }
+
+let possibleString: String? = "An optional string"
+let forceString: String = possibleString!
+
+let assumedString: String! = "unwrapped string"
+let implicitString: String = assumedString
