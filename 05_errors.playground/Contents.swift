@@ -47,3 +47,14 @@ enum SandwichError: Error {
     case notGas
     case notIngredients
 }
+
+var age = -5
+precondition(age >= 0, "Age can't be negative")
+
+if age > 10 {
+    print("Continue!!")
+}else if age >= 0 {
+    print("You're a little guy")
+}else {
+    assertionFailure("Age can't be negative")
+}
