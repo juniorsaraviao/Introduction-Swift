@@ -24,3 +24,7 @@ let justMoreThanAMillion = 1_000_000.000_000_1
 let twoThousand: UInt16 = 2_000
 let one: UInt8 = 1
 let twoThousandPlusOne = twoThousand + UInt16(one)
+
+
+typealias AudioSample = UInt16
+var maxAmplitude = AudioSample.max
