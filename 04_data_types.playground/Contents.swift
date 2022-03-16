@@ -38,6 +38,15 @@ print("Status code: \(http200Status.statusCode) - Description: \(http200Status.d
 let possibleAge = "nil"
 let converterAge = Int(possibleAge) ?? 0 // Int?
 
-let surveyAnswer: String?
-surveyAnswer = "42"
-print(surveyAnswer)
+var surveyAnswer: String?
+// surveyAnswer = "42"
+print(surveyAnswer ?? "Null value")
+
+let ageSample = "14"
+let converter = Int(ageSample)
+
+if converter != nil {
+    print("The user's age is not null - value: \(converter!)")
+}else {
+    print("The uses's age is null")
+}
