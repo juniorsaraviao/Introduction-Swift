@@ -33,3 +33,11 @@ print("Second way - Status code \(http404Error.0)")
 
 let http200Status = (statusCode: 200, description: "OK")
 print("Status code: \(http200Status.statusCode) - Description: \(http200Status.description)")
+
+
+let possibleAge = "nil"
+let converterAge = Int(possibleAge) ?? 0 // Int?
+
+let surveyAnswer: String?
+surveyAnswer = "42"
+print(surveyAnswer)
