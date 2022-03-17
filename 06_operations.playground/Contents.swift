@@ -10,3 +10,6 @@ if a == b {
 }
 
 14.5.truncatingRemainder(dividingBy: 5)
+
+let age = 17
+print(age >= 18 ? "Enter the pool" : "Sorry, you can't")
