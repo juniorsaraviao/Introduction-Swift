@@ -24,3 +24,27 @@ let defaultColor = "red"
 var userColorName: String?
 
 var colorNameToUse = userColorName ?? defaultColor
+
+//Closed ranges
+for idx in 1...5 {
+    print(idx)
+}
+
+//Not consider the last value
+for idx in 1..<5 {
+    print(idx)
+}
+let names = ["Ricardo", "Juan Gabriel", "Pedro"]
+for i in 0..<names.count {
+    print("The person\(i+1)'s name is \(names[i])")
+}
+
+for name in names[1...] {
+    print("Another way, the person's name is: \(name)")
+}
+
+var range = ...5 // from -infinito to 5
+range.contains(-4)
+range.contains(7)
+
+
