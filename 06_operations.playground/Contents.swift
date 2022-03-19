@@ -47,4 +47,28 @@ var range = ...5 // from -infinito to 5
 range.contains(-4)
 range.contains(7)
 
+// Not
+let allowEntry = false
+if !allowEntry {
+    print("Denied access!!!")
+}
+
+// And
+let enterDoorCode = true
+let passRetinaScan = false
+
+if enterDoorCode && passRetinaScan {
+    print("Welcome to the company!")
+}else {
+    print("Denied access, try again!!!")
+}
+
+// Or
+let hasMoney = true
+let hasInvitation = false
+if hasMoney || hasInvitation {
+    print("Welcome to the party!")
+}else {
+    print("Not enter")
+}
 
