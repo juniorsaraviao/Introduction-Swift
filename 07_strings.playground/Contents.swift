@@ -14,3 +14,13 @@ let dolarSig = "\u{24}"
 let blackHeart = "\u{2665}"
 let heart = "\u{1F480}"
 let flag = "\u{1F1F5}\u{1F1EA}"
+
+
+var empeString = ""
+var anotherEmptyString = String()
+
+if empeString.isEmpty {
+    print("The string is empty")
+} else {
+    print("The string has a value")
+}
