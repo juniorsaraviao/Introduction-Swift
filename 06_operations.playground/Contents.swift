@@ -13,3 +13,14 @@ if a == b {
 
 let age = 17
 print(age >= 18 ? "Enter the pool" : "Sorry, you can't")
+
+
+let defaultAge = 18
+var userAge: Int?
+
+var ageToBeUsed = userAge ?? defaultAge
+
+let defaultColor = "red"
+var userColorName: String?
+
+var colorNameToUse = userColorName ?? defaultColor
