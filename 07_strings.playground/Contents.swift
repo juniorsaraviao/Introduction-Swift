@@ -24,3 +24,15 @@ if empeString.isEmpty {
 } else {
     print("The string has a value")
 }
+
+
+let name = "Football ⚽️"
+for char in name {
+    print(char)
+}
+print(name.count)
+let exclamationChar: Character = "!"
+
+let nameChars: [Character] = ["a", "b", "c"]
+var nameString = String(nameChars)
+nameString.append(exclamationChar)
