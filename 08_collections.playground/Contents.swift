@@ -36,3 +36,17 @@ for item in shoppingList {
 for (idx, item) in shoppingList.enumerated() {
     print("Item \(idx + 1): \(item)")
 }
+
+// Set
+// a set is not ordered
+var letters = Set<Character>()
+letters.count
+letters.insert("c")
+letters.insert("h")
+letters.insert("a")
+
+if let removedLetter = letters.remove("h") {
+    print("The letter \"\(removedLetter)\" has been removed")
+}
+
+let arrayFromSet = Array(letters)
