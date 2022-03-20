@@ -83,3 +83,7 @@ if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB"){
 
 airports["PMI"] = nil
 airports
+
+for (key, value) in airports {
+    print("\(key) - \(value)")
+}
