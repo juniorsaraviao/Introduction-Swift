@@ -28,3 +28,11 @@ var firstElement = shoppingList.first
 shoppingList[1...3]
 shoppingList[1...3] = ["Bananas", "Oranges", "Apples"]
 shoppingList
+
+for item in shoppingList {
+    print(item)
+}
+
+for (idx, item) in shoppingList.enumerated() {
+    print("Item \(idx + 1): \(item)")
+}
