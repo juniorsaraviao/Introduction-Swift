@@ -52,3 +52,10 @@ welcome.insert(contentsOf: ", Sir", at: welcome.index(before: welcome.endIndex))
 
 let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
 welcome.removeSubrange(range)
+
+
+greeting
+let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+let firstPart = greeting[..<index] // type: substring
+
+let stringFirstPart = String(firstPart) // type: string
