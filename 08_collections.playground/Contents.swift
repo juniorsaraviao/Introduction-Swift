@@ -50,3 +50,17 @@ if let removedLetter = letters.remove("h") {
 }
 
 let arrayFromSet = Array(letters)
+
+
+let oddDigits: Set<Int> = [1, 3, 5, 7, 9]
+let evenDigits: Set<Int> = [0, 2, 4, 6, 8]
+let primeDigits: Set<Int> = [2, 3, 5, 7]
+
+// Union
+let union = oddDigits.union(evenDigits).sorted()
+// Intersection
+let intersect = oddDigits.intersection(primeDigits).sorted()
+// Difference
+let difference = evenDigits.subtracting(primeDigits).sorted()
+// simetric difference
+let simetric = oddDigits.symmetricDifference(primeDigits).sorted()
