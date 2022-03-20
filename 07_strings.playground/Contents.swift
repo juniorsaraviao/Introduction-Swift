@@ -77,3 +77,17 @@ for scene in collection {
     }
 }
 print(act1SceneCount)
+
+let ghost = "Ghost!! 👻"
+
+for codeUnit in ghost.utf8 {
+    print(codeUnit, terminator: " ")
+}
+print(" ")
+for codeUnit in ghost.utf16 {
+    print(codeUnit, terminator: " ")
+}
+print(" ")
+for codeUnit in ghost.unicodeScalars {
+    print(codeUnit, terminator: " ")
+}
