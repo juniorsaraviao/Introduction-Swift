@@ -36,3 +36,19 @@ let exclamationChar: Character = "!"
 let nameChars: [Character] = ["a", "b", "c"]
 var nameString = String(nameChars)
 nameString.append(exclamationChar)
+
+let greeting = "Hello, how are you?"
+greeting[greeting.startIndex]
+greeting[greeting.index(before: greeting.endIndex)]
+
+for idx in greeting.indices {
+    print("\(greeting[idx]) - \(idx)")
+}
+
+var welcome = "Hi"
+
+welcome.insert("!", at: welcome.endIndex)
+welcome.insert(contentsOf: ", Sir", at: welcome.index(before: welcome.endIndex))
+
+let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
+welcome.removeSubrange(range)
