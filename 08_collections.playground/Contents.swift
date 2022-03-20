@@ -64,3 +64,22 @@ let intersect = oddDigits.intersection(primeDigits).sorted()
 let difference = evenDigits.subtracting(primeDigits).sorted()
 // simetric difference
 let simetric = oddDigits.symmetricDifference(primeDigits).sorted()
+
+
+// Dictionary
+var nameOfIntegers = [Int: String]()
+nameOfIntegers[15] = "fifteen"
+nameOfIntegers = [:] // clean dictionary
+
+var airports: [String: String] = ["YYZ": "Toronto",
+                                  "DUB": "Dublin",
+                                  "PMI": "Palma de Mallorca"
+]
+airports.isEmpty
+
+if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB"){
+    print("The old name was \(oldValue)")
+}
+
+airports["PMI"] = nil
+airports
