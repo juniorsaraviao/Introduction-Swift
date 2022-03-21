@@ -52,3 +52,25 @@ func mean(_ numbers: Double...) -> Double {
     return total / Double(numbers.count)
 }
 mean(5,4,6,7,1)
+
+var x = 5
+
+func addOne(number: Int) {
+    var number2 = number
+    number2 += 1
+    print("The number is \(number2) now")
+}
+
+addOne(number: x)
+
+func swapTwoInts(_ a: inout Int, _ b: inout Int){
+    let tempA = a
+    a = b
+    b = tempA
+}
+
+var someInt = 3
+var otherInt = 7
+print("someInt: \(someInt) - otherInt: \(otherInt)")
+swapTwoInts(&someInt, &otherInt)
+print("someInt: \(someInt) - otherInt: \(otherInt)")
