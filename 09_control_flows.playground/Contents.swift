@@ -35,3 +35,27 @@ switch someChar {
     default:
         print("any letter of the alphabet")
 }
+
+let somePoint = (1, 1)
+switch somePoint {
+case (0, 0):
+    print("The origin")
+case (_, 0):
+    print("The point is in the axis X")
+case (0, _):
+    print("The point is in the axis Y")
+default:
+    print("Some place")
+}
+
+let anotherPoint = (2, 2)
+switch anotherPoint {
+case (let x, 0):
+    print("x: \(x)")
+case (0, let y):
+    print("y: \(y)")
+case let (x,y) where x == y || x == -y:
+    print("Diagonal: (\(x), \(y))")
+default:
+    print("Empty")
+}
