@@ -104,3 +104,10 @@ func testCountryValidation(country: [String: Any]){
 
 testCountryValidation(country: country)
 
+
+if #available(iOS 12, macOS 10.12, *) {
+    // Execute with iOS 12+ or macOS 10.12+
+}else {
+    // Continue with old versions
+}
+
