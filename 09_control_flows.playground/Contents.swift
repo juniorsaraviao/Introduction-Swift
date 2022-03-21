@@ -89,3 +89,18 @@ default:
     description += " an integer"
 }
 print(description)
+
+// guard and return
+var country = ["continent": "America", "pais" : "Peru", "ranking": 16] as [String: Any]
+
+
+func testCountryValidation(country: [String: Any]){
+    // if population exists, continue with the execution
+    guard let population = country["population"] else {
+        return
+    }
+    print(population)
+}
+
+testCountryValidation(country: country)
+
