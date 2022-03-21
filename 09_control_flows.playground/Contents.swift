@@ -23,3 +23,15 @@ repeat {
     i += 1
 } while i < 10
 print(i)
+
+
+// switch
+let someChar: Character = "z"
+switch someChar {
+    case "a", "A":
+        print("first letter of the alphabet")
+    case "z", "Z":
+        print("last letter of the alphabet")
+    default:
+        print("any letter of the alphabet")
+}
