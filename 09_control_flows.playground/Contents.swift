@@ -59,3 +59,21 @@ case let (x,y) where x == y || x == -y:
 default:
     print("Empty")
 }
+
+
+// Control tranfer sentences
+
+//continue and break
+let sentence = "Using continue and break in swift"
+var filteredSentence = String()
+let charToRemove: [Character] = ["a", "e", "i", "o", "u"]
+for ch in sentence {
+    if charToRemove.contains(ch){
+        continue
+    }
+    filteredSentence.append(ch)
+    if ch == "k" {
+        break
+    }
+}
+print(filteredSentence)
