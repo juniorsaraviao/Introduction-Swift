@@ -74,3 +74,42 @@ var otherInt = 7
 print("someInt: \(someInt) - otherInt: \(otherInt)")
 swapTwoInts(&someInt, &otherInt)
 print("someInt: \(someInt) - otherInt: \(otherInt)")
+
+
+func addTwoInts(_ a: Int, _ b: Int) -> Int{
+    return a+b
+}
+
+func multiplyTwoInts(_ a: Int, _ b: Int) -> Int{
+    return a*b
+}
+
+var mathFunction: (Int, Int) -> Int = addTwoInts
+mathFunction(4, 5)
+
+func printMathResult(_ mathFunc: (Int, Int) -> Int, _ a: Int, _ b: Int){
+    print("The result is: \(mathFunc(a, b))")
+}
+
+printMathResult(multiplyTwoInts, 10, 20)
+
+func stepForward(_ input: Int) -> Int {
+    return input + 1
+}
+
+func stepBackward(_ input: Int) -> Int {
+    return input - 1
+}
+
+func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    backward ? stepBackward : stepForward
+}
+
+var value = 7
+let moveNearerZero = chooseStepFunction(backward: value > 0)
+
+while value != 0 {
+    print("\(value)...")
+    value = moveNearerZero(value)
+}
+print("Zero...!!!")
