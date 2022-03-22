@@ -93,16 +93,17 @@ func printMathResult(_ mathFunc: (Int, Int) -> Int, _ a: Int, _ b: Int){
 
 printMathResult(multiplyTwoInts, 10, 20)
 
-func stepForward(_ input: Int) -> Int {
-    return input + 1
-}
-
-func stepBackward(_ input: Int) -> Int {
-    return input - 1
-}
-
 func chooseStepFunction(backward: Bool) -> (Int) -> Int {
-    backward ? stepBackward : stepForward
+    
+    func stepForward(_ input: Int) -> Int {
+        return input + 1
+    }
+
+    func stepBackward(_ input: Int) -> Int {
+        return input - 1
+    }
+    
+    return backward ? stepBackward : stepForward
 }
 
 var value = 7
