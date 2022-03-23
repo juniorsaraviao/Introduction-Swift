@@ -66,3 +66,38 @@ let incrementByTen = makeIncrementer(forIncrement: 10)
 incrementByTen()
 incrementByTen()
 incrementByTen()
+
+
+var completionHandlers: [() -> Void] = []
+
+func someFunctionWithEscapinClousure(completionHandler: @escaping () -> Void) {
+    completionHandlers.append(completionHandler)
+}
+completionHandlers.count
+
+func someFunctionWithNonEscapingClousure(clousure: () -> Void) {
+    clousure()
+}
+
+class SomeClass {
+    var x = 10
+    func doSomething(){
+        someFunctionWithEscapinClousure {
+            self.x = 100 // escaping clousures needs self reference
+        }
+        
+        someFunctionWithNonEscapingClousure {
+            x = 200 // non escaping clousures don't need self references
+        }
+    }
+}
+
+let instance = SomeClass()
+print(instance.x)
+
+instance.doSomething()
+print(instance.x)
+
+completionHandlers.count
+completionHandlers.first?()
+print(instance.x)
