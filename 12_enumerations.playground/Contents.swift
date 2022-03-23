@@ -4,15 +4,15 @@ enum SomeEnumaration {
     // add enums
 }
 
-enum CompassPoint {
+enum CompassPoint: String {
     case north
     case south
     case east
     case west
 }
 
-enum Planet {
-    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
 }
 
 var directionToGo = CompassPoint.east
@@ -52,4 +52,22 @@ case let .upc(numberSystem, manufacturer, product, check):
     print("UPC: \(numberSystem), \(manufacturer), \(product), \(check)")
 case let .qrCode(productCode):
     print("QR: \(productCode)")
+}
+
+
+enum ASCIIControlCharacter: Character {
+    case tab = "\t"
+    case lineFeed = "\n"
+    case carriageReturn = "\r"
+}
+
+let earthOrder = Planet.earth.rawValue
+let northDirection = CompassPoint.east.rawValue
+let somePlanet = Planet(rawValue: 2)
+
+let planetPosition = -4
+if let planet = Planet(rawValue: planetPosition){
+    // do something
+}else {
+    print("The planet doesn't exist")
 }
