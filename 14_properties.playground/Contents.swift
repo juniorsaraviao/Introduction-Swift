@@ -71,3 +71,24 @@ struct Cuboid {
 
 let cuboId = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
 cuboId.volume
+
+
+
+// willSet // didSet
+
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps){
+            print("Steps goes to \(newTotalSteps)")
+        }
+        
+        didSet {
+            if totalSteps > oldValue {
+                print("Steps have increased \(totalSteps - oldValue)")
+            }
+        }
+    }
+}
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+stepCounter.totalSteps += 1
