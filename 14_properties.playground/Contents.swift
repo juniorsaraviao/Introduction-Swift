@@ -56,3 +56,18 @@ square.center
 let initialSquare = square.center
 square.center = SinglePoint(x: 20, y: 20)
 
+
+struct Cuboid {
+    var width = 0.0, height = 0.0, depth = 0.0
+    
+    var volume: Double {
+        // not necessary include 'GET'
+//        get {
+//            width * height * depth
+//        }
+        return width * height * depth
+    }
+}
+
+let cuboId = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+cuboId.volume
