@@ -63,3 +63,39 @@ class SuverQuestion {
 let q1 = SuverQuestion(text: "Do you like tacos?")
 q1.ask()
 q1.response = "Yes, I do"
+
+
+class Vehicle {
+    var numberOfWheels = 0
+    var description: String {
+        return "Number of wheels: \(numberOfWheels)"
+    }
+}
+
+let vehicle = Vehicle()
+vehicle.description
+
+class Bike: Vehicle {
+    override init() {
+        super.init()
+        numberOfWheels = 2
+    }
+}
+
+let bike = Bike()
+bike.description
+
+class Hoverboard: Vehicle {
+    var color: String
+    init(color: String) {
+        self.color = color
+        // calls super.init() by default
+    }
+    
+    override var description: String {
+        return "\(super.description) with color: \(self.color)"
+    }
+}
+
+let hoverboard = Hoverboard(color: "silver")
+print(hoverboard.description)
