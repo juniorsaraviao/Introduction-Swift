@@ -92,3 +92,30 @@ class StepCounter {
 let stepCounter = StepCounter()
 stepCounter.totalSteps = 200
 stepCounter.totalSteps += 1
+
+
+struct SomeStruct {
+    var counter = 0
+    static var storedTypeProperty = "SOME VALUE"
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+
+var instanceStr = SomeStruct()
+
+var otherInstanceStr = SomeStruct()
+
+SomeStruct.storedTypeProperty
+
+class SomeClass {
+    static var storedTypeProperty = "Some Value"
+    static var computedTypeProperty: Int {
+        return -9
+    }
+    
+    // possible to change the value if another class inherits from this class
+    class var overrideableComputedTypeProperty: Int {
+        return 108
+    }
+}
