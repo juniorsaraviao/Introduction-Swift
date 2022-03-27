@@ -27,7 +27,17 @@ struct Point {
     func isToRightOf(of x: Double) -> Bool {
         return self.x > x
     }
+    
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+        // values in a struct are immutable
+//        self.x += deltaX
+//        self.y += deltaY
+        
+        // another way
+        self = Point(x: self.x + deltaX, y: self.y + deltaY)
+    }
 }
 
-let somePoint = Point(x: 4, y: 5)
+var somePoint = Point(x: 4, y: 5)
 somePoint.isToRightOf(of: 6)
+somePoint.moveBy(x: 2, y: -6)
