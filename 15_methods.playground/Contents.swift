@@ -41,3 +41,57 @@ struct Point {
 var somePoint = Point(x: 4, y: 5)
 somePoint.isToRightOf(of: 6)
 somePoint.moveBy(x: 2, y: -6)
+
+
+class SomeClass {
+    class func someMethod() {
+        print("Hello")
+    }
+}
+
+SomeClass.someMethod()
+
+
+struct LevelTracker {
+    static var highestUnlockedLevel = 1
+    var currentLevel = 1
+    
+    static func unlock(_ level: Int) {
+        if level > highestUnlockedLevel {
+            highestUnlockedLevel = level
+        }
+    }
+    
+    static func isUnlocked(_ level: Int) -> Bool {
+        level <= highestUnlockedLevel
+    }
+    
+    mutating func advance(to level: Int) -> Bool {
+        if LevelTracker.isUnlocked(level) {
+            currentLevel = level
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+class Player {
+    var tracker = LevelTracker()
+    let playerName: String
+    func complete(level: Int) {
+        LevelTracker.unlock(level + 1)
+        tracker.advance(to: level + 1)
+    }
+    
+    init(name: String) {
+        self.playerName = name
+    }
+}
+
+var player = Player(name: "player 1")
+player.complete(level: 1)
+
+var player2 = Player(name: "player 2")
+player.complete(level: 3)
+LevelTracker.highestUnlockedLevel
