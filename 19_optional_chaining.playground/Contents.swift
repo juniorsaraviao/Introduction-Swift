@@ -118,3 +118,14 @@ if let firstRoomName = person1.residence?[0].name {
 }else {
     print("Unknown name!")
 }
+
+person1.residence?.address = createAddress()
+if let street = person1.residence?.address?.street {
+    print("The person's residence is on \(street)")
+}else {
+    print("Unknown address")
+}
+
+if let buildingIdentifier = person1.residence?.address?.buildingIndentifier() {
+    print("Person lives at \(buildingIdentifier)")
+}
