@@ -99,3 +99,49 @@ class Hoverboard: Vehicle {
 
 let hoverboard = Hoverboard(color: "silver")
 print(hoverboard.description)
+
+
+enum TemperatureUnit {
+    case kelvin, celsius, fahrenheit
+    
+    init?(symbol: Character) {
+        switch symbol {
+            case "K":
+                self = .kelvin
+            case "C":
+                self = .celsius
+            case "F":
+                self = .fahrenheit
+            default:
+                return nil
+        }
+    }
+}
+
+let someUnit = TemperatureUnit(symbol: "C")
+
+class Product {
+    let name: String
+    
+    init?(name: String) {
+        if name.isEmpty {
+            return nil
+        }
+        self.name = name
+    }
+}
+
+class CartItem: Product {
+    let quantity: Int
+    init?(name: String, quantity: Int) {
+        if quantity < 1 {
+            return nil
+        }
+        self.quantity = quantity
+        super.init(name: name)
+    }
+}
+
+if let someSocks = CartItem(name: "Socks", quantity: 2) {
+    print("\(someSocks.name) - \(someSocks.quantity)")
+}
